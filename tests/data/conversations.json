@@ -1,0 +1,54 @@
+{
+  "BRCA1": [
+    {
+      "speaker": "user",
+      "utterance": "Give me a question I can answer with a GAF file for the human genome"
+    },
+    {
+      "speaker": "system",
+      "utterance": "Which genes are associated with a specific Gene Ontology (GO) term?\n\nExample: What genes are involved in the biological process \"apoptosis\"?"
+    },
+    {
+      "speaker": "user",
+      "utterance": "Let's say I've answered this question. Generate a follow-ups"
+    },
+    {
+        "speaker": "system",
+        "utterance": "Here is a follow-up question you might ask after identifying the GO terms associated with the BRCA1 gene:\n\nWhich of the GO terms associated with BRCA1 have the strongest experimental evidence supporting them?\n\nThis question would help you assess the reliability of the annotations and understand which functions, processes, or components have been most rigorously validated."
+    },
+    {
+      "speaker": "user",
+      "utterance": "How would I answer this question with a GAF file? Cite official column names"
+    },
+    {
+      "speaker": "system",
+      "utterance": "To answer the follow-up questions using a Gene Association File (GAF), you would use specific columns in the file as follows:\n\nColumns to use:\nDB_Object_Symbol (Column 3): Identify rows where the gene symbol is \"BRCA1.\"\nGO_ID (Column 5): Lists the GO terms associated with BRCA1.\nEvidence_Code (Column 7): Look for evidence codes like EXP (Inferred from Experiment), IDA (Inferred from Direct Assay), IMP (Inferred from Mutant Phenotype), etc., which indicate stronger experimental evidence.\nApproach: Filter the GAF file for entries where DB_Object_Symbol is \"BRCA1\" and then review the Evidence_Code for each GO term. Higher confidence is generally attributed to non-IEA codes, particularly those directly linked to experimental methods."
+    }
+  ],
+"TP53": [
+    {
+      "speaker": "user",
+      "utterance": "Give me a question I can answer with a GAF file for the human genome."
+    },
+    {
+      "speaker": "system",
+      "utterance": "Which molecular functions are associated with a specific gene according to Gene Ontology (GO) terms?\n\nExample: What molecular functions are linked to the TP53 gene?"
+    },
+    {
+      "speaker": "user",
+      "utterance": "Let's say I've answered this question. Generate a follow-up."
+    },
+    {
+      "speaker": "system",
+      "utterance": "Here is a follow-up question you might ask after identifying the GO terms associated with the TP53 gene:\n\nWhich GO terms linked to TP53 are supported by multiple evidence codes?\n\nThis question helps you assess the robustness of the gene-function relationship by evaluating whether different types of evidence support the same GO term."
+    },
+    {
+      "speaker": "user",
+      "utterance": "How would I answer this question with a GAF file? Cite official column names."
+    },
+    {
+      "speaker": "system",
+      "utterance": "To answer the follow-up question using a Gene Association File (GAF), you would use the following columns:\n\nColumns to use:\nDB_Object_Symbol (Column 3): Identify rows where the gene symbol is \"TP53.\"\nGO_ID (Column 5): Lists the GO terms associated with TP53.\nEvidence_Code (Column 7): Check for multiple evidence codes linked to each GO term to assess the strength and consistency of the annotations.\nApproach: Filter the GAF file for entries where DB_Object_Symbol is \"TP53\" and then review the Evidence_Code for each GO term. A stronger association is often inferred when multiple evidence types corroborate the same GO term."
+    }
+  ]
+}
